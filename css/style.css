@@ -1,23 +1,31 @@
 body{
-    background: #7c6c54;
+    background:white;
 }
 head{
-    font-family: 'Zen Tokyo Zoo', cursive;
+    font-family: 'Roboto', sans-serif;
 
 }
 header{
     margin-bottom: 50px;
 }
+a{
+text-decoration: none;
+
+}
 p{
-    font-family: 'Zen Tokyo Zoo', cursive;
-    font-size: 1.3rem;
+    
+    font-size: 1.1rem;
+    color: #3d242f;
+    font-family: 'Roboto', sans-serif;
 }
 b{
     font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+    
     
 }
 h1{
-    font-family: 'Zen Tokyo Zoo', cursive;
+    font-family: 'Roboto', sans-serif;
     text-align: center;
     font-size: 2.5rem;
 }
@@ -26,23 +34,23 @@ h1{
     width: 100%
 }
 .position-img-principale{
-    height: 270px;
     overflow: hidden;
 }
 .position_img_article{
-margin-top: 70px;
+margin-top: 40px;
 -webkit-border-radius: 20px;
 -moz-border-radius: 20px;
 border-radius: 20px;
 }
 .position-text-article{
     margin-top: 10px;
-    border: 2px solid;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
     color:black;
-    background-color: #bd9669;
+    background-color:#c2a4d5;
+    box-shadow: 30px;
+    box-shadow: 0px 5px 20px 0px rgb(0 0 0 / 20%);
 }
 .img_article{
  width: 100%;
@@ -52,15 +60,18 @@ border-radius: 20px;
 }
 .icon_cam{
     font-size: 2rem;
-   display: flex;
-    justify-content: center;
-    
+    color: #3d242f;
+   
 }
-
+.position_camera{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
 .text-article{
-    margin: 10px;
     text-align: center;
-    margin-bottom: 30px;
+    padding-bottom: 10px;
+    
 }
 
 footer{
@@ -142,7 +153,7 @@ button>p{
 }
 .check{
     font-size: 5rem;
-    color:#bd9669;
+    color:#3d242f;
 }
 
 
