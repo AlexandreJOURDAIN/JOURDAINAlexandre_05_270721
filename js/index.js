@@ -11,7 +11,7 @@ fetch("http://localhost:3000/api/cameras")
 		for (let jsonArticle of jsonListArticle) {
 			let article = new Article(jsonArticle);
 			document.querySelector(".all_camera").innerHTML += `
-																<article>
+				<article>
                 <a href="products.html?id=${article._id}">
                     <div class="position_img_article">
                         <img class="img_article" src="${article.imageUrl}" alt="">
@@ -24,7 +24,7 @@ fetch("http://localhost:3000/api/cameras")
                             <p> modele${article.name}</p>
 							<p>${article.price } € </p>
                         </div>
-                    </div>
+                    </div>	
                 </a>
             </article>
 																`;

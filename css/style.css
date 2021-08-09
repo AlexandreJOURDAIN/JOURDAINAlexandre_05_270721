@@ -127,6 +127,23 @@ color: #3c3434;
 }
 /*--button page products--*/
 
+.position_form{
+    display: flex;
+    flex-direction: column;
+}
+.position_label{
+ text-align: center;
+ margin-bottom: 10px;
+}
+.position_select_lentille{
+    display: flex;
+    justify-content: center;
+}
+#lentille-select{
+    height: 40px;
+    border-radius: 20px;
+    margin: 5px;
+}
 .position-button{
     display: flex;
     justify-content: center;
