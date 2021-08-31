@@ -30,10 +30,5 @@ fetch("http://localhost:3000/api/cameras")
 																`;
 		}
 	})
-	.then(function (cameras) {
-		console.log(cameras);
-		cameras.forEach((camera) => {
-			console.log(camera.name);
-		});
-	})
+	
 	.catch(function (error) {});

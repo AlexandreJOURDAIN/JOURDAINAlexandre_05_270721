@@ -1,6 +1,9 @@
 const searchParams = new URLSearchParams(window.location.search);
 const productId = searchParams.get("id");
 
+let product = [];
+
+//-------------------------------fetch----------------------------------------
 fetch("http://localhost:3000/api/cameras/" + productId)
 	.then(function (reponse) {
 		if (reponse.ok) {
@@ -9,12 +12,13 @@ fetch("http://localhost:3000/api/cameras/" + productId)
 	})
 	.then((jsonArticle) => {
 		let article = new Article(jsonArticle);
+
 		document.querySelector(".camera_fav").innerHTML += `
-				<article>
-                <a href="products.html?id=${article._id}">
-				<H1>Modele ${article.name}</H1>
-                    <div class="position_img_article">
-                        <img class="img_article" src="${article.imageUrl}" alt="">
+	<article>
+	<a href="products.html?id=${article._id}">
+	<H1>Modele ${article.name}</H1>
+	<div class="position_img_article">
+	<img class="img_article" src="${article.imageUrl}" alt="">
                     </div>
                     <div class="position-text-article">
                         <div class="position_camera">
@@ -25,34 +29,38 @@ fetch("http://localhost:3000/api/cameras/" + productId)
 							<p>${article.price} € </p>
                           </div>
 						   </a>
-						   <div class="position_form">
-            <div class="position_label">
-                <label for="lentille-select"></label>
-                <select name="" id="">
-                    <option value="">Selectionner votre lentille</option>
-                </select>
-            </div>   
-        </div>
-							
+						   <label for="lentilleselect"></label>
+	<select name="lentilleselect" id="lentilleselect">
+	<option value=""> Veuillez choisir votre option </option>
+	</select> 
+	<div class="position-button">
+    
+        <button  id="click_achat">
+            <p>ajouter au panier </p>
+        </button>
+    </a>
+</div>
 						</article>
 																`;
 
-		// for (let option of article.lenses) {
-		// document.querySelector (".lentille-select").innerHtml+=
-		// <option value="lentille">${option}</option>
-		// }
-	}
-	// for (let option of article.lenses) {
-		// document.querySelector (".lentille-select").innerHtml+=
-		// <option value="lentille">${option}</option>
-		// }
-	
-	)
-	
-	.then(function (cameras) {
-		console.log(cameras);
-		cameras.forEach((camera) => {
-			console.log(camera.name);
+		for (let option of article.lenses) {
+			document.querySelector("#lentilleselect").innerHTML += `
+		<option value=${option}>${option}</option>
+	 `;
+		}
+
+		//---------------------------------------fetch---------------------------------------
+		document.getElementById("click_achat").addEventListener("click", (event) => {
+			event.preventDefault();
+			addtocart();
 		});
+		function addtocart() {
+			const objectSelected = document.querySelector("#lentilleselect")[lentilleselect.selectedIndex].value;
+			const objectToAdds = { name: article.name, price: article.price, image: article.imageUrl, lentille:objectSelected};
+			product.push(objectToAdds);
+			console.log(article.name);
+			localStorage.setItem("panier", JSON.stringify(product));
+		}
 	})
+
 	.catch(function (error) {});

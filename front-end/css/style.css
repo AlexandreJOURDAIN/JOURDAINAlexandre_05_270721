@@ -158,8 +158,12 @@ button{
     text-align: center;
     background-color:#3c3434 ;
 }
-button>p{
+.confirm-command{
     color:#bd9669;
+}
+
+.dropdown:hover > #cart-dropdown{
+    display: block;
 }
 
 /*--page confirmations--*/
