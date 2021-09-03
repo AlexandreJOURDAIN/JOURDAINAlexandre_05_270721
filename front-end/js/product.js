@@ -58,7 +58,7 @@ fetch("http://localhost:3000/api/cameras/" + productId)
 			const objectSelected = document.querySelector("#lentilleselect")[lentilleselect.selectedIndex].value;
 			const objectToAdds = { name: article.name, price: article.price, image: article.imageUrl, lentille:objectSelected};
 			product.push(objectToAdds);
-			console.log(article.name);
+			console.log(objectSelected);
 			localStorage.setItem("panier", JSON.stringify(product));
 		}
 	})

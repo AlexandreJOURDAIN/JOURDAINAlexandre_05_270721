@@ -25,18 +25,34 @@
 <section class="confirmation_panier">
     <table class="table">
         <thead>
-            <tr><th>Article</th><th>Prix</th><th>Quantité</th></tr>
+            <tr>
+                <th>Article</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+            </tr>
         </thead>
         <tbody id="cart-tablebody"></tbody>
     </table>
-    
+
     <p>Sous total : <span class="subtotal"></span>€</p>
-    
-    <button class="confirm-command">Passer la commande</button>
+
+    <h2>Information complementaire pour votre commande</h2>
+
+    <form id="form">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="John"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Doe"><br>
+        <label for="fname">Email Adress:</label><br>
+        <input type="text" id="eadress" name="eadress" value="jean.paul@gmail.com"><br>
+    </form>
+
+
+    <button id="confirmcommand">Passer la commande</button>
 
 </section>
 <footer>
-        
+
     <a class="icon_contact fa fa-instagram icon-md">
         <a class="icon_contact fa fa-facebook icon-md"></a>
         <a class="icon_contact fa fa-twitter icon-md"></a>
