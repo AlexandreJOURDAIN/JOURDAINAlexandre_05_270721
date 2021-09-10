@@ -35,9 +35,13 @@ fetch("http://localhost:3000/api/cameras/" + productId)
 	</select> 
 	<div class="position-button">
     
-        <button  id="click_achat">
-            <p>ajouter au panier </p>
+	<a href="panier.html">
+        <button onclick="testConfirmDialog()"  id="click_achat">
+            <p>ajoutez au panier </p>
         </button>
+		
+		
+		</a>
     </a>
 </div>
 						</article>
@@ -49,18 +53,21 @@ fetch("http://localhost:3000/api/cameras/" + productId)
 	 `;
 		}
 
+
 		//---------------------------------------fetch---------------------------------------
 		document.getElementById("click_achat").addEventListener("click", (event) => {
 			event.preventDefault();
 			addtocart();
 		});
 		function addtocart() {
+			//vérifier si le panier et le panier local storage existe
+			//si il existe comparé l'article name et l'option 
 			const objectSelected = document.querySelector("#lentilleselect")[lentilleselect.selectedIndex].value;
-			const objectToAdds = { name: article.name, price: article.price, image: article.imageUrl, lentille:objectSelected};
+			const objectToAdds = { name: article.name, quantity:1, price: article.price, image: article.imageUrl, lentille:objectSelected};
 			product.push(objectToAdds);
-			console.log(objectSelected);
 			localStorage.setItem("panier", JSON.stringify(product));
 		}
+		
 	})
 
 	.catch(function (error) {});

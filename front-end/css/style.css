@@ -135,14 +135,12 @@ color: #3c3434;
  text-align: center;
  margin-bottom: 10px;
 }
-.position_select_lentille{
-    display: flex;
-    justify-content: center;
-}
-#lentille-select{
+
+#lentilleselect{
     height: 40px;
     border-radius: 20px;
     margin: 5px;
+    
 }
 .position-button{
     display: flex;
@@ -177,4 +175,8 @@ button{
     color:#3d242f;
 }
 
+/*--tableau panier--*/
+.table{
+    font-size: 20px;
+}
 
