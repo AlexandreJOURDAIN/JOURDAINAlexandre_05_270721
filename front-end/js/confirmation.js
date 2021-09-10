@@ -1,10 +1,10 @@
 window.onload = function(){
     /*recuperation des valeurs saisies par l'utilisateur*/
-    let getName = document.getElementById('fname').value=sessionStorage.getItem('Nom');
-    let getSurname = document.getElementById('lname').value=sessionStorage.getItem('Prenom');
-    let getEmailAdress = document.getElementById('eadress').value=sessionStorage.getItem('adressemail');
-    let getAdresse = document.getElementById('adresse').value=sessionStorage.getItem('adresse');
-    let geteCodepostal = document.getElementById('codepostal').value=sessionStorage.getItem('codepostal');
+    let getName = document.getElementById('nom').value=sessionStorage.getItem('Nom');
+    let getSurname = document.getElementById('prenom').value=sessionStorage.getItem('Prenom');
+    let getEmailAdress = document.getElementById('adresseMail').value=sessionStorage.getItem('adressemail');
+    let getAdresse = document.getElementById('adressePostal').value=sessionStorage.getItem('adresse');
+    let geteCodepostal = document.getElementById('codePostal').value=sessionStorage.getItem('codepostal');
     let getVille = document.getElementById('ville').value=sessionStorage.getItem('ville');
 }
 

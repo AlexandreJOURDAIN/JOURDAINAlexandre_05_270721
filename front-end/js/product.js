@@ -35,13 +35,12 @@ fetch("http://localhost:3000/api/cameras/" + productId)
 	</select> 
 	<div class="position-button">
     
+	
+	</a>
 	<a href="panier.html">
-        <button onclick="testConfirmDialog()"  id="click_achat">
-            <p>ajoutez au panier </p>
-        </button>
-		
-		
-		</a>
+	<button onclick="testConfirmDialog()"  id="click_achat">
+	<p>ajoutez au panier </p>
+	</button>
     </a>
 </div>
 						</article>

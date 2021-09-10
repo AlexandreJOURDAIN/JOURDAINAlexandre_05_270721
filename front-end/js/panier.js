@@ -34,19 +34,20 @@ let getpanier = (document.getElementById("price").value = sessionStorage.getItem
 //---------- sauvegarde données formulaire -----------------------//
 
 function result() {
-	let name = document.getElementById("fname").value;
-	let surname = document.getElementById("lname").value;
-	let emailadress = document.getElementById("eadress").value;
-    let adresse = document.getElementById("adresse").value;
-    let codepostale = document.getElementById("codepostal").value;
+	let name = document.getElementById("nom").value;
+	let surname = document.getElementById("prenom").value;
+	let emailAdress = document.getElementById("adresseMail").value;
+    let location = document.getElementById("adressePostal").value;
+    let codePostale = document.getElementById("codePostal").value;
     let ville = document.getElementById("ville").value;
+   
+    
 
-    console.log(result())
-
-	sessionStorage.setItem("Nom", name);
-	sessionStorage.setItem("Prenom", surname);
-	sessionStorage.setItem("adressemail", emailadress);
-    sessionStorage.setItem("adresse", adresse);
-    sessionStorage.setItem("codepostal", codepostal);
-    sessionStorage.setItem("ville", ville);
-}
+	sessionStorage.setItem('Nom',name);
+	sessionStorage.setItem('Prenom',surname);
+	sessionStorage.setItem('adressemail',emailAdress);
+    sessionStorage.setItem('adresse',location);
+    sessionStorage.setItem('codepostal',codePostale);
+    sessionStorage.setItem('ville',ville);
+    console.log(sessionStorage.getItem('Nom'))
+};
