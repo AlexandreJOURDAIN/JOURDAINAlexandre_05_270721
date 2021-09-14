@@ -1,12 +1,15 @@
 const panier = JSON.parse(localStorage.getItem("panier"));
 
+//stopper rajout élément array //
+
 console.log(panier);
 let totalCost = 0;
 
 for (let article of panier) {
-	totalCost = totalCost + article.price;
+    totalCost = totalCost + article.price;
 	console.log(totalCost);
 
+    
 	document.querySelector("#confirm_panier").innerHTML += `
     <table class="table">
     <thead>
@@ -16,7 +19,7 @@ for (let article of panier) {
     <tr>
     <td id="price">Prix du produit: ${article.price}$</td>
     </tr>
-    <td>Votre choix de lentille: ${article.lense}</td>
+    <td>Votre choix de lentille: ${article.lentille}</td>
     
     </thead>
     </table>
@@ -26,12 +29,16 @@ for (let article of panier) {
 document.querySelector("#total_price").innerHTML += `
 <p>Sous total : <span class="subtotal">${totalCost}</span>€</p>`;
 
+
+
 let stockage = localStorage.getItem("panier");
 //------------ recupération données panier ------------------//
 
 let getpanier = (document.getElementById("price").value = sessionStorage.getItem("panier"));
 
+
 //---------- sauvegarde données formulaire -----------------------//
+
 
 function result() {
 	let name = document.getElementById("nom").value;
@@ -42,6 +49,7 @@ function result() {
     let ville = document.getElementById("ville").value;
    
     
+    
 
 	sessionStorage.setItem('Nom',name);
 	sessionStorage.setItem('Prenom',surname);
@@ -51,3 +59,6 @@ function result() {
     sessionStorage.setItem('ville',ville);
     console.log(sessionStorage.getItem('Nom'))
 };
+
+let form = document.querySelector('#form');
+
