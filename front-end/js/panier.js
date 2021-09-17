@@ -39,7 +39,10 @@ let getpanier = (document.getElementById("price").value = sessionStorage.getItem
 
 //---------- sauvegarde données formulaire -----------------------//
 
-
+document.getElementById("confirmcommand").addEventListener("click", (event) => {
+    event.preventDefault();
+    addtocart();
+});
 function result() {
 	let name = document.getElementById("nom").value;
 	let surname = document.getElementById("prenom").value;
